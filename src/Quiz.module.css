@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+.quizBody {
+    display: flex;
+    justify-content: center;
+    background-color: #F5F7FB;
+    position: relative; /* Set relative positioning to contain the absolute pseudo-element */
+    min-height: 100vh; /* Ensures full height for the body */
+
+}
+
+  .quizBody::before {
+    content: "";
+    position: absolute;
+    top: -100px; /* Move the ellipse higher */
+    right: -150px; /* Adjust further right */
+    width: 345px; /* Increase ellipse width */
+    height: 152px ; /* 400px Increase ellipse height */
+    background-color: #FDFAD1;
+    border-radius: 50%; /* Creates the ellipse shape */
+     /* Ensure it is behind the content */
+  }
+
+  .quizBody::after {
+    content: "";
+    position: absolute;
+    bottom: -50px; /* Adjust this for placement */
+    left: -100px; /* Adjust for positioning on the left */
+    width: 217px; /* 300PX Ellipse width */
+    height: 148px; /* 300PXEllipse height */
+    background-color: #DEEBF8;
+    border-radius: 50%; /* Creates the ellipse shape */
+     /* Ensure it is behind the content */
+}
+
+
+.optionButton  {
+    padding: 0.5rem 2rem;
+    background-color: #F5F7FB;
+    margin-inline-end: 2rem;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    color: #5C6389;
+    border: 1px solid #293264;
+
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 20px; /* Adds space between each question block */
+  }
+
+  hr {
+    margin-top: 15px;  /* Adds space above the underline */
+    margin-bottom: 30px; /* Adds space below the underline */
+    border: 0;
+    height: 1px;
+    background-color: #ccc; /* Optional: Adds color to the underline */
+  }
+
+  .checkAnswerBtn {
+    border: none;
+    background-color: #4D5B9e;
+    border-radius: 14px 14px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 13px 13px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 25%;
+  }

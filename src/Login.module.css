@@ -1,0 +1,32 @@
+.login {
+    display: flex;
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Set the height of the container to full view height */
+    background-color: #f5f7fb /* Optional: add a background color */
+  }
+
+.quote {
+    color: #363e6d;
+    /* word-spacing: 0.3rem; */
+    font-size: 20px;
+    font-weight: inherit;
+
+}
+
+.loginHeader {
+    text-align: center;
+    color: #363e6d;
+}
+.starQuizBtn  {
+    width: 100%;
+    /* padding: 20px 20px 20px 19px; */
+    border: none;
+    background-color: #4D5B9e;
+    border-radius: 14px 14px;
+    color: #fff;
+    font-size: 1.2rem;
+    /* font-weight: lighter; */
+    padding: 1rem 1rem;
+    cursor: pointer;
+}
