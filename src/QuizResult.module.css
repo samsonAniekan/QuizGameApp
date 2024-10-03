@@ -1,10 +1,17 @@
-
+body {
+    margin: 0;
+}
 .quizBody {
+    flex-direction: column;
     display: flex;
     justify-content: center;
     background-color: #F5F7FB;
     position: relative;
     min-height: 100vh;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+
 
 }
 
@@ -23,10 +30,10 @@
   .quizBody::after {
     content: "";
     position: absolute;
-    bottom: -50px;
-    left: -100px;
-    width: 217px;
-    height: 148px;
+    bottom: -22px;
+    left: -125px;
+    width: 191px;
+    height: 111px;
     background-color: #DEEBF8;
     border-radius: 50%;
 
@@ -45,4 +52,74 @@
     color: #5C6389;
     border: 1px solid #293264;
 
+}
+.playAgainBtn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin: auto;
+    background-color: #4D5B9e;
+    width: 25%;
+    color: #fff;
+}
+.score {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #293264;
+        text-align: center;
+    }
+
+@media (max-width: 646px) {
+    .quizBody::before {
+        content: "";
+        position: absolute;
+        top: -129px;
+        right: -150px;
+        width: 345px;
+        height: 152px ;
+        background-color: #FDFAD1;
+        border-radius: 50%;
+
+      }
+}
+
+@media(max-width: 800px) {
+    .quizBody::after {
+    content: "";
+    position: absolute;
+    bottom: -168px;
+    left: -100px;
+    width: 217px;
+    height: 148px;
+    background-color: #DEEBF8;
+    border-radius: 50%
+    }
+}
+
+@media(max-width: 480px) {
+    .optionButton{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .playAgainBtn {
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 30px;
+        text-align: center;
+        cursor: pointer;
+        margin: auto;
+        background-color: #4D5B9e;
+        width: 200px;
+        color: #fff;
+    }
 }

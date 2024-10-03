@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import he from 'he';  // Import the he library
 import styles from './Quiz.module.css';
 import QuizResult from './QuizResult';
 
 function QuizHome() {
   const [questions, setQuestions] = useState([]);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [showResults, setShowResults] = useState(false); // New state to toggle results
+  const [showResults, setShowResults] = useState(false);
 
   useEffect(() => {
     fetchQuizData();
@@ -15,8 +16,12 @@ function QuizHome() {
     const data = await fetch("https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple");
     const res = await data.json();
 
+    // Decode HTML entities for questions and answers
     const questionsWithShuffledAnswers = res.results.map((question) => ({
       ...question,
+      question: he.decode(question.question), // Decode the question text
+      correct_answer: he.decode(question.correct_answer), // Decode the correct answer
+      incorrect_answers: question.incorrect_answers.map((ans) => he.decode(ans)), // Decode incorrect answers
       shuffledAnswers: shuffleAnswersArr(question),
     }));
 
@@ -38,11 +43,17 @@ function QuizHome() {
   };
 
   const handleCheckAnswers = () => {
-    setShowResults(true); // Show results when button is clicked
+    setShowResults(true);
+  };
+
+  const handlePlayAgain = () => {
+    setShowResults(false);
+    setSelectedAnswers({});
+    fetchQuizData();
   };
 
   if (showResults) {
-    return <QuizResult questions={questions} selectedAnswers={selectedAnswers} />; // Render results
+    return <QuizResult questions={questions} selectedAnswers={selectedAnswers} onPlayAgain={handlePlayAgain} />;
   }
 
   return (
@@ -82,7 +93,6 @@ function QuizHome() {
       </button>
     </div>
   );
-
 }
 
 export default QuizHome;

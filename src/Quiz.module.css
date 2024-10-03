@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    overflow: hidden;
+
 }
 .quizBody {
     display: flex;
@@ -11,7 +11,7 @@ body {
     position: relative;
     min-height: 100vh;
     padding: 20px;
-    overflow: hidden;
+    overflow: auto;
 }
 
   .quizBody::before {
@@ -29,12 +29,12 @@ body {
   .quizBody::after {
     content: "";
     position: absolute;
-    bottom: -50px;
-    left: -100px;
-    width: 217px;
-    height: 148px;
+    bottom: -87px;
+    left: -77px;
+    width: 200px;
+    height: 153px;
     background-color: #DEEBF8;
-    border-radius: 50%;
+    border-radius: 50%
 
 }
 
@@ -82,4 +82,52 @@ hr {
     border: 0;
     height: 1px;
     background-color: #ccc;
+}
+
+
+/* media query rules */
+@media (max-width : 758px) {
+    .quizBody::before {
+    content: "";
+    position: absolute;
+    top: -129px;
+    right: -150px;
+    width: 345px;
+    height: 152px ;
+    background-color: #FDFAD1;
+    border-radius: 50%;
+
+  }
+
+}
+
+@media (max-width: 460px) {
+    .quizBody::after {
+    content: "";
+    position: absolute;
+    bottom: -85px;
+    left: -93px;
+    width: 176px;
+    height: 153px;
+    background-color: #DEEBF8;
+    border-radius: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .optionButton {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem auto;
+    }
+}
+
+@media (max-width: 902px) {
+    .optionButton {
+
+
+    }
 }
