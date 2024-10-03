@@ -1,20 +1,14 @@
-body {
-    margin: 0;
-    overflow: hidden;
-}
+
 .quizBody {
     display: flex;
-    flex-direction: column; /* Arrange items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
+    justify-content: center;
     background-color: #F5F7FB;
-    position: relative;
-    min-height: 100vh; /* Ensure full height for the body */
-    padding: 20px;
-    overflow: hidden;
+    position: relative; /* Set relative positioning to contain the absolute pseudo-element */
+    min-height: 100vh; /* Ensures full height for the body */
+
 }
 
-  .quizBody::before {
+.quizBody::before {
     content: "";
     position: absolute;
     top: -100px; /* Move the ellipse higher */
@@ -22,8 +16,8 @@ body {
     width: 345px; /* Increase ellipse width */
     height: 152px ; /* 400px Increase ellipse height */
     background-color: #FDFAD1;
-    border-radius: 50%;
-
+    border-radius: 50%; /* Creates the ellipse shape */
+     /* Ensure it is behind the content */
   }
 
   .quizBody::after {
@@ -52,38 +46,3 @@ body {
     border: 1px solid #293264;
 
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-}
-
-li {
-    margin-bottom: 20px;
-}
-
-.checkAnswerBtn {
-    border: none;
-    background-color: #4D5B9e;
-    border-radius: 14px;
-    color: #fff;
-    font-size: 1rem;
-    padding: 13px;
-    cursor: pointer;
-    width: 200px; /* Optional: define a fixed width */
-    margin-top: 20px; /* Add some space above the button */
-}
-
-hr {
-    margin-top: 15px;
-    margin-bottom: 30px;
-    border: 0;
-    height: 1px;
-    background-color: #ccc;
-}
-
-
-/* MEDIA QUERIES */
-/* For small screens (mobile devices) */
