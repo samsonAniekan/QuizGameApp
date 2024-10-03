@@ -1,9 +1,9 @@
 .login {
     display: flex;
-    justify-content: center; /* Horizontally centers the content */
-    align-items: center; /* Vertically centers the content */
-    height: 100vh; /* Set the height of the container to full view height */
-    background-color: #f5f7fb /* Optional: add a background color */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7fb
   }
 
 .quote {
@@ -26,7 +26,6 @@
     border-radius: 14px 14px;
     color: #fff;
     font-size: 1.2rem;
-    /* font-weight: lighter; */
     padding: 1rem 1rem;
     cursor: pointer;
 }
