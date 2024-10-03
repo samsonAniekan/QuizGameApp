@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './QuizResult.module.css'; // Use the same CSS styles
+import styles from './QuizResult.module.css';
 
 function QuizResult({ questions, selectedAnswers }) {
   return (
@@ -21,9 +21,9 @@ function QuizResult({ questions, selectedAnswers }) {
                     style={{
                       backgroundColor: isCorrect ? '#90EE90' : isWrong ? '#FF7F7F' : 'transparent',
                       color: isSelected ? 'white' : 'black',
-                      cursor: 'default', // Keep it default since no further interaction is needed
+                      cursor: 'default',
                     }}
-                    disabled // Disable the button since it's just for display
+                    disabled // i disabled the result here
                   >
                     {answer}
                   </button>
