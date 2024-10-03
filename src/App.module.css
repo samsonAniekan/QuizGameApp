@@ -1,45 +1,6 @@
-body {
-font-family: "Roboto", sans-serif;
-font-weight: 700;
-font-style: normal;
-margin: 0 auto;
-display: flex;
-gap: 10rem;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
-height: 100vh; /* Full viewport height */ /* To center the text */
-background-color: #F5F7FB; /* Optional: Add a background color */
 
-}
-
-.optionButton {
-    padding: 0.5rem 2rem;
+* {
     background-color: #F5F7FB;
-    margin-inline-end: 2rem;
-    border: none;
-    border-radius: 30px;
-    text-align: center;
-    font-size: 18px;
-    cursor: pointer;
-    color: #5C6389;
-    border: 1px solid #293264;
-
+    box-sizing: border-box;
+    /* margin: 0; */
 }
-
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    margin-bottom: 20px; /* Adds space between each question block */
-  }
-
-  hr {
-    margin-top: 15px;  /* Adds space above the underline */
-    margin-bottom: 30px; /* Adds space below the underline */
-    border: 0;
-    height: 1px;
-    background-color: #ccc; /* Optional: Adds color to the underline */
-  }
